@@ -5,13 +5,13 @@ import java.time.Period;
 
 public class Vehiculo {
         private final int numeroRuedas;
-        private final String nombrePropieatrio;
+        private final String nombrePropietario;
         private final LocalDate fechaCompra;
         private final int numeroPasajeros;
 
     public Vehiculo(int numeroRuedas, String nombrePropieatrio, LocalDate fechaCompra, int numeroPasajeros) {
         this.numeroRuedas = numeroRuedas;
-        this.nombrePropieatrio = nombrePropieatrio;
+        this.nombrePropietario = nombrePropieatrio;
         this.fechaCompra = fechaCompra;
         this.numeroPasajeros = numeroPasajeros;
     }
@@ -20,8 +20,8 @@ public class Vehiculo {
         return numeroRuedas;
     }
 
-    public String getNombrePropieatrio() {
-        return nombrePropieatrio;
+    public String getNombrePropietario() {
+        return nombrePropietario;
     }
 
     public LocalDate getFechaCompra() {
@@ -37,7 +37,7 @@ public class Vehiculo {
         //VEHÍCULO: nº ruedas 4, propietario Joaquin Zafra, antigüedad coche 4 años, nº pasajeros 4
         StringBuilder builder = new StringBuilder();
         builder.append("VEHÍCULO: nº ruedas ").append(numeroRuedas).
-                append(", propietario ").append(nombrePropieatrio).
+                append(", propietario ").append(nombrePropietario).
                 append(", antigüedad coche ").append(calcularAnnos()).
                 append(" años, nº pasajeros ").append(numeroPasajeros);
         return builder.toString();
