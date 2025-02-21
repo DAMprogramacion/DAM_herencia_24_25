@@ -24,8 +24,8 @@ public class FiguraRegular {
     public String toString() {
         StringBuilder builder = new StringBuilder();
         builder.append("FIGURA REGULAR: ").append(numeroLados).append(" lados.");
-        builder.append(" Longitude del lado: ").append(String.format(".2f", longitudLado));
-        builder.append(". Perímetro: ").append(String.format(".2f", calcularPerimetro()));
+        builder.append(" Longitud del lado: ").append(String.format("%.2f", longitudLado));
+        builder.append(". Perímetro: ").append(String.format("%.2f", calcularPerimetro()));
         return builder.toString();
     }
 }

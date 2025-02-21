@@ -19,7 +19,7 @@ public class TrianguloEquilatero extends FiguraRegular{
     public String toString() {
         StringBuilder builder = new StringBuilder();
         builder.append(nombreFigura).append(". ").append(super.toString());
-        builder.append(". Área: ").append(calcularArea());
+        builder.append(". Área: ").append(String.format("%.2f",calcularArea()));
         return builder.toString();
     }
 }
