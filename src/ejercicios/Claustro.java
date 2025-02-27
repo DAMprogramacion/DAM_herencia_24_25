@@ -82,8 +82,25 @@ public class Claustro {
         return profesores.stream().
                 filter(profesor ->  profesor.getEspecialidad().equals(especialidad)).
                 count();
+    }
+
+    //método que nos devuelve el profesor de mas edad de una especialidad
+    public Profesor getProferosMayorPorEspecialidad(Especialidad especialidad){
+        return profesores.stream().
+                filter(profesor -> profesor.getEspecialidad().equals(especialidad)).
+                max(Comparator.comparing(Persona::getEdad)).orElse(null);
+    }
+    //metodo que nos devuelva de los profesores interinos el total de meses contratados
+    public int getTotalMesesContratadosTodosInterinos() {
+        return profesores.stream().
+                filter(profesor -> profesor instanceof ProfesorInterino).
+                mapToInt(profesor -> ((ProfesorInterino) profesor).getMesesContratacion()).
+                sum();
 
     }
+
+
+
 }
 
 
