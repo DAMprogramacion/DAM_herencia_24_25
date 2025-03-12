@@ -1,6 +1,7 @@
 package ejercicios.ejercicio_ra6;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Helper {
     public static boolean chequearCodigo (String codigo) {
@@ -10,8 +11,8 @@ public class Helper {
         return marca.toLowerCase().matches("honda|ford|seat|suzuki");
     }
     public static Coche[] listarCochesPorMarca (List<Coche> coches, String marca) {
-        return (Coche[]) coches.stream().
+        return coches.stream().
                 filter(coche -> coche.getMarcaCoche().equalsIgnoreCase(marca)).
-                toArray();
+                toList().toArray(new Coche[0]);
     }
  }

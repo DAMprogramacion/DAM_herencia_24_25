@@ -1,4 +1,4 @@
-package ejercicios;
+package ejercicios.ejerciciosTema;
 import java.util.*;
 
 public class Claustro {
